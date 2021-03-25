@@ -8,15 +8,14 @@
 ## You can use the factorial function to help you,, and the other
 ## functions to test that your solution works.
 
-
 def combinations(n, k):
+
     '''
     Returns the number of ways to select k distinct elements from
     a set of size n (also known as 'n choose k').
     Assumption: n and k are non-negative integers, with 0 <= k <= n.
     The function must return an _integer_ value.
     '''
-
     result = factorial(n)/((factorial(k))*(factorial(n-k)))
     return int(result)
 

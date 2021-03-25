@@ -7,24 +7,26 @@
 import math
 
 
-# Modify the following function so that it determines whether b is a factor of a
-# The statement "return False" is just a placeholder - you should replace it.
+
 def is_factor(a, b):
+    if (a%b == 0):
+        return True
     return False
 
 
-# Modify the following function definition so that it determines whether
-# n is a prime number or not.
-# The statement "return False" is just a placeholder - you should replace it.
 def is_prime(n):
-    return False
+    for i in range(2,n):
+        if is_factor(n,i):
+            return False
+    return True
 
 
-# Modify the following function definition so that it returns the number
-# of prime factors of n.
-# The statement "return 0" is just a placeholder - you should replace it.
 def count_prime_factors(n):
-    return 0
+    count = 0
+    for i in range(2,n+1):
+        if ((is_prime(i)) and (is_factor(n,i)) ):
+            count= count+1
+    return count
 
 # REMEMBER THAT THIS FILE (WHEN YOU SUBMIT IT) MUST NOT CONTAIN ANYTHING
 # OTHER THAN YOUR FUNCTION DEFINITIONS AND COMMENTS.
