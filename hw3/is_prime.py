@@ -6,13 +6,10 @@
 
 import math
 
-
-
 def is_factor(a, b):
     if (a%b == 0):
         return True
     return False
-
 
 def is_prime(n):
     for i in range(2,n):
@@ -20,11 +17,10 @@ def is_prime(n):
             return False
     return True
 
-
 def count_prime_factors(n):
     count = 0
     for i in range(2,n+1):
-        if ((is_prime(i)) and (is_factor(n,i)) ):
+        if ( (is_factor(n,i)) and (is_prime(i))  ):
             count= count+1
     return count
 
